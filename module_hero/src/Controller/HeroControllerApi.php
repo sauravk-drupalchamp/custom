@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\module_hero\Controller;
+namespace Drupal\module_hero\ControllerApi;
 
 use Drupal\Core\Controller\ControllerBase;
 use PhpParser\Node\Expr\Cast\String_;
