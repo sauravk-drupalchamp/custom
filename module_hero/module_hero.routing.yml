@@ -1,0 +1,15 @@
+module_hero.herolist:
+  path: '/herolist'
+  defaults:
+    _controller: '\Drupal\module_hero\Controller\HeroController::heroList'
+    _title: 'Our super heroes list'
+  requirements:
+    _permission: 'access content'
+
+module_hero.heroApi:
+  path: '/heroapi'
+  defaults:
+    _controller: '\Drupal\module_hero\Controller\HeroControllerApi::heroApi'
+    _title: 'Our API'
+  requirements:
+    _permission: 'access content'
