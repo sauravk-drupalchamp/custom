@@ -3,7 +3,6 @@
 namespace Drupal\module_hero\ControllerServices;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\devel\Plugin\Devel\Dumper\Kint;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\module_hero\ArticleHeroServices;
 
@@ -28,7 +27,7 @@ class HeroControllerServices extends ControllerBase {
 
   public function heroServices() {
 
-    kint($this->articleHeroServices->getHeroArticle()); die();
+    var_dump($this->articleHeroServices->getHeroArticle()); die();
     
     $heroes = [
         ['name' => 'Hulk'],

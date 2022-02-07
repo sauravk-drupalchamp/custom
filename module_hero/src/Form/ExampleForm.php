@@ -7,7 +7,6 @@ namespace Drupal\student_registration\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Twig\Node\Expression\FunctionExpression;
 
 class ExampleForm extends FormBase {
   /**
@@ -74,7 +73,7 @@ class ExampleForm extends FormBase {
 
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        \Drupal::messenger()->addMessage(t("Student Registration Done!! Registered Values are:"));
+        \Drupal::messenger()->addMessage($this->t("Student Registration Done!! Registered Values are:"));
 	foreach ($form_state->getValues() as $key => $value) {
 	  \Drupal::messenger()->addMessage($key . ': ' . $value);
     }

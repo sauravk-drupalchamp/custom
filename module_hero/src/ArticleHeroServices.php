@@ -2,9 +2,8 @@
 
 namespace Drupal\module_hero;
 
-use Drupal\Core\Entity\QueryFactory;
-use Drupal\devel\Plugin\Devel\Dumper\Kint;
-use Drupal\Core\Entity\EntityManager;
+use Drupal\Core\Entity\Query\QueryInterface;
+use Drupal\Core\Entity\EntityTypeManager;
 
 /*
 *
@@ -15,7 +14,7 @@ class ArticleHeroServices {
     private $entityQuery;
     private $enitityManager;
 
-    public function __construct( QueryFactory $entityQuery, EntityManager $enitityManager )
+    public function __construct( QueryInterface $entityQuery, EntityTypeManager $enitityManager )
     {
         $this->entityQuery = $entityQuery;
         $this->enitityManager = $enitityManager;
